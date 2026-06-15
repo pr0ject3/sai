@@ -48,12 +48,34 @@ body {
 }
 
 .title {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.25em;
+
     font-family: 'Yidstreet', sans-serif;
     font-size: clamp(60px, 10vw, 170px);
     font-weight: 700;
+
     letter-spacing: -0.04em;
+
     line-height: 1;
+
     white-space: nowrap;
+}
+
+
+.logo {
+
+    width: 0.8em;
+    height: 0.8em;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
 }
 
 .subtitle {
