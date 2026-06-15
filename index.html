@@ -7,13 +7,21 @@
 
 <title>프로젝트삼 : 사이</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
-
-
 <style>
+
+@font-face {
+    font-family: 'Yidstreet';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetL.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yidstreet';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
 
 * {
     box-sizing: border-box;
@@ -23,206 +31,128 @@ body {
     margin: 0;
     background: #ffffff;
     color: #111111;
-
-    font-family: 'Noto Serif KR', serif;
+    font-family: sans-serif;
 }
 
-
-/* 첫 화면 */
-
 .hero {
-
     width: 100%;
     height: 100vh;
+    padding: 0 24px;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
     text-align: center;
 }
 
-
-/* 프로젝트삼 : 사이 */
-
 .title {
-
+    font-family: 'Yidstreet', sans-serif;
     font-size: clamp(60px, 10vw, 170px);
-
     font-weight: 700;
-
-    letter-spacing: -0.08em;
-
+    letter-spacing: -0.04em;
     line-height: 1;
-
-white-space: nowrap;
-
-}
-
-
-/* 설명 */
-
-.subtitle {
-
-    margin-top: 40px;
-
-    font-size: clamp(14px, 1.5vw, 22px);
-
-    color: #888;
-
-    letter-spacing: -0.03em;
-
-}
-
-
-
-/* 작업 목록 영역 */
-
-.archive {
-
-    width: 90%;
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    padding: 150px 0;
-
-}
-
-
-.project {
-
-    padding: 80px 0;
-
-    border-top: 1px solid #ddd;
-
-}
-
-
-.number {
-
-    font-size: 14px;
-
-    color: #777;
-
-    margin-bottom: 40px;
-
-}
-
-
-.project-title {
-
-    font-size: clamp(32px, 5vw, 70px);
-
-    line-height: 1.2;
-
-    letter-spacing: -0.06em;
-
-}
-
-
-.info {
-
-    margin-top: 30px;
-
-    font-size: 16px;
-
-    color: #555;
-
-    line-height: 1.8;
-
-}
-
-
-
-/* 모바일 */
-
-@media (max-width: 600px) {
-
-.title {
-    font-size: 11vw;
-    letter-spacing: -0.09em;
     white-space: nowrap;
 }
 
 .subtitle {
-    margin-top: 30px;
+    margin-top: 40px;
+    font-size: clamp(14px, 1.5vw, 22px);
+    color: #888;
+    letter-spacing: -0.03em;
 }
 
 .archive {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 150px 0;
+}
+
+.project {
     padding: 80px 0;
+    border-top: 1px solid #ddd;
 }
 
+.number {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 40px;
 }
 
+.project-title {
+    font-family: 'Yidstreet', sans-serif;
+    font-size: clamp(32px, 5vw, 70px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+.info {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 10.5vw;
+        letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+        margin-top: 30px;
+    }
+
+    .archive {
+        padding: 80px 0;
+    }
+
+}
 
 </style>
 
 </head>
 
-
-
 <body>
-
 
 <section class="hero">
 
-
     <div class="title">
-
         프로젝트삼 : 사이
-
     </div>
-
 
     <div class="subtitle">
-
         보여진 것과 남겨진 것 사이
-
     </div>
 
-
 </section>
-
-
 
 <section class="archive">
 
-
     <div class="project">
 
-
         <div class="number">
-
             001
-
         </div>
 
-
         <div class="project-title">
-
             달수랑<br>
             정직이랑<br>
             바다아이
-
         </div>
-
 
         <div class="info">
-
             2026.06<br>
             작업 기록
-
         </div>
-
 
     </div>
 
-
 </section>
-
 
 </body>
 
