@@ -104,6 +104,33 @@ body {
     letter-spacing: -0.03em;
 }
 
+.project-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+
+}
+
+
+.project-image {
+
+    width: 260px;
+    height: 170px;
+
+    object-fit: cover;
+
+}
+
+
+.project-text {
+
+    flex: 1;
+
+}
+
 .info {
     margin-top: 30px;
     font-size: 16px;
@@ -132,6 +159,23 @@ body {
     .archive {
         padding: 80px 0;
     }
+
+.project-content {
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 40px;
+
+}
+
+
+.project-image {
+
+    width: 100%;
+    height: auto;
+
+}
 
 }
 
@@ -163,20 +207,50 @@ body {
 
     <div class="project">
 
-        <div class="number">
-            001
+       <div class="project">
+
+
+    <div class="number">
+        001
+    </div>
+
+
+    <div class="project-content">
+
+
+        <div class="project-text">
+
+
+            <div class="project-title">
+
+                달수랑<br>
+                정직이랑<br>
+                바다아이
+
+            </div>
+
+
+            <div class="info">
+
+                2026.06<br>
+                선돌극장<br><br>
+
+                관객이 공연을 만나기 전,<br>
+                그리고 떠난 이후의 기록
+
+            </div>
+
+
         </div>
 
-        <div class="project-title">
-            달수랑<br>
-            정직이랑<br>
-            바다아이
-        </div>
 
-        <div class="info">
-            2026.06<br>
-            작업 기록
-        </div>
+        <img class="project-image" src="images/dalsu_thumb.jpg">
+
+
+    </div>
+
+
+</div>
 
     </div>
 
