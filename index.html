@@ -1,81 +1,235 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>프로젝트삼 : 사이</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
+
+
 <style>
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    background: #111;
-    color: #eee;
-    font-family: sans-serif;
+    background: #ffffff;
+    color: #111111;
+
+    font-family: 'Noto Serif KR', serif;
 }
 
-.main {
-    padding: 80px 24px;
+
+/* 첫 화면 */
+
+.hero {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
-h1 {
-    font-size: 42px;
-    font-weight: 400;
-    margin-bottom: 10px;
+
+/* 프로젝트삼 : 사이 */
+
+.title {
+
+    font-size: clamp(60px, 10vw, 170px);
+
+    font-weight: 700;
+
+    letter-spacing: -0.08em;
+
+    line-height: 1;
+
 }
+
+
+/* 설명 */
 
 .subtitle {
-    color: #aaa;
-    margin-bottom: 80px;
+
+    margin-top: 40px;
+
+    font-size: clamp(14px, 1.5vw, 22px);
+
+    color: #555;
+
+    letter-spacing: -0.03em;
+
 }
+
+
+
+/* 작업 목록 영역 */
+
+.archive {
+
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 150px 0;
+
+}
+
 
 .project {
-    margin-bottom: 60px;
+
+    padding: 80px 0;
+
+    border-top: 1px solid #ddd;
+
 }
 
-.thumb {
-    width: 100%;
-    height: 220px;
-    background: #333;
-    margin-bottom: 20px;
+
+.number {
+
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 40px;
+
 }
 
-h2 {
-    font-weight: 400;
+
+.project-title {
+
+    font-size: clamp(32px, 5vw, 70px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.06em;
+
 }
+
+
+.info {
+
+    margin-top: 30px;
+
+    font-size: 16px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* 모바일 */
+
+@media (max-width: 600px) {
+
+
+.title {
+
+    font-size: clamp(48px, 15vw, 90px);
+
+}
+
+
+.subtitle {
+
+    margin-top: 30px;
+
+}
+
+
+.archive {
+
+    padding: 80px 0;
+
+}
+
+
+}
+
 
 </style>
+
 </head>
+
 
 
 <body>
 
-<div class="main">
 
-<h1>프로젝트삼 : 사이</h1>
-
-<div class="subtitle">
-보여진 것과 남겨진 것 사이
-</div>
+<section class="hero">
 
 
-<div class="project">
+    <div class="title">
 
-<div class="thumb"></div>
+        프로젝트삼 : 사이
 
-<h2>001<br>
-달수랑 정직이랑 바다아이</h2>
-
-<p>
-2026<br>
-작업 기록
-</p>
-
-</div>
+    </div>
 
 
-</div>
+    <div class="subtitle">
+
+        보여진 것과 남겨진 것 사이
+
+    </div>
+
+
+</section>
+
+
+
+<section class="archive">
+
+
+    <div class="project">
+
+
+        <div class="number">
+
+            001
+
+        </div>
+
+
+        <div class="project-title">
+
+            달수랑<br>
+            정직이랑<br>
+            바다아이
+
+        </div>
+
+
+        <div class="info">
+
+            2026.06<br>
+            작업 기록
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
 
 </body>
+
 </html>
