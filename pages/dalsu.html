@@ -2,179 +2,295 @@
 <html lang="ko">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>달수랑 정직이랑 바다아이</title>
-
+<title>001 달수랑 정직이랑 바다아이</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
 
 body {
-
     margin: 0;
-
-    background: #ffffff;
-
+    background: #fff;
     color: #111;
-
     font-family: sans-serif;
-
 }
 
+.page {
+    width: 100%;
+}
 
-/* 첫 화면 */
-
-.hero {
-
-    height: 100vh;
+.scene {
+    min-height: 100vh;
+    padding: 12vh 10vw;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
-    padding: 0 10%;
-
+    border-bottom: 1px solid #eee;
 }
 
+.scene.center {
+    align-items: center;
+    text-align: center;
+}
 
 .number {
-
     font-size: 28px;
-
     font-weight: 700;
-
-    margin-bottom: 60px;
-
+    margin-bottom: 48px;
 }
-
 
 .title {
-
     font-size: clamp(48px, 8vw, 120px);
-
+    line-height: 1.1;
+    letter-spacing: -0.06em;
     font-weight: 700;
-
-    line-height: 1.15;
-
-    letter-spacing: -0.07em;
-
 }
 
-
-.info {
-
-    margin-top: 50px;
-
+.caption {
+    margin-top: 48px;
     color: #777;
-
+    font-size: 16px;
     line-height: 1.8;
-
 }
 
-
-/* 내용 */
-
-.content {
-
-    padding: 100px 10%;
-
-    max-width: 900px;
-
+.kicker {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 28px;
 }
 
-
-.section {
-
-    margin-bottom: 150px;
-
+.text {
+    max-width: 720px;
+    font-size: clamp(22px, 3vw, 42px);
+    line-height: 1.55;
+    letter-spacing: -0.04em;
+    font-weight: 500;
 }
 
-
-.section h2 {
-
-    font-size: 40px;
-
+.small-text {
+    max-width: 680px;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.8;
+    color: #333;
 }
 
-
-.section p {
-
-    line-height: 2;
-
-    color: #444;
-
+.image {
+    width: min(720px, 100%);
+    margin-bottom: 48px;
 }
 
+.image img {
+    width: 100%;
+    display: block;
+}
 
+.back {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #111;
+}
+
+@media (max-width: 700px) {
+    .scene {
+        padding: 10vh 7vw;
+    }
+
+    .back {
+        position: absolute;
+    }
+
+    .text {
+        font-size: 26px;
+    }
+}
 </style>
-
 </head>
-
 
 <body>
 
+<a class="back" href="../index.html">← 프로젝트삼 : 사이</a>
 
-<section class="hero">
+<main class="page">
 
+<section class="scene center">
+    <div class="number">001</div>
 
-<div class="number">
+    <div class="title">
+        달수랑<br>
+        정직이랑<br>
+        바다아이
+    </div>
 
-001
-
-</div>
-
-
-<div class="title">
-
-달수랑<br>
-정직이랑<br>
-바다아이
-
-</div>
-
-
-<div class="info">
-
-2026.06<br>
-선돌극장<br><br>
-
-작업 기록
-
-</div>
-
-
+    <div class="caption">
+        2026.06<br>
+        선돌극장<br><br>
+        무대 위에 남은 것보다<br>
+        무대 밖에서 지나간 시간들이 조금 더 궁금해졌다.
+    </div>
 </section>
 
+<section class="scene">
+    <div class="kicker">공연이 시작되기 전의 시간</div>
 
+    <div class="text">
+        공연을 만들 때마다<br>
+        시작점에 대해 생각하게 된다.<br><br>
 
-<section class="content">
-
-
-<div class="section">
-
-<h2>시작</h2>
-
-
-<p>
-
-처음부터 거대한 계획은 아니었다.<br><br>
-
-작은 제안과 호기심에서 시작된 작업은<br>
-공연을 둘러싼 여러 시간들을 건드리기 시작했다.
-
-</p>
-
-
-</div>
-
-
+        첫 대사인지.<br>
+        암전인지.<br>
+        관객이 객석에 앉는 순간인지.
+    </div>
 </section>
 
+<section class="scene">
+    <div class="image">
+        <img src="../images/dalsu/stage.jpg" alt="공연 전 무대">
+    </div>
+
+    <div class="small-text">
+        명확하게 선을 긋기는 어렵다.<br><br>
+
+        다만 이번 작업에서도 결국 비슷한 곳에서 멈췄다.<br>
+        무대 위에 올리는 것과 관객이 실제로 경험하는 것은<br>
+        어디까지 같은 것인가.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="image">
+        <img src="../images/dalsu/suno.jpg" alt="SUNO 작업 화면">
+    </div>
+
+    <div class="text">
+        “하우스 음악이라도 만들어 볼까요?”
+    </div>
+
+    <div class="caption">
+        시작은 특별한 계획보다<br>
+        12,000원의 유료 결제가 아까워 던진 작은 제안에 가까웠다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="text">
+        “안내멘트를 노래로 하면 재밌겠다.”
+    </div>
+
+    <div class="caption">
+        연출의 한마디가 더해지며<br>
+        음악은 분위기를 채우는 것에서<br>
+        역할을 가지기 시작했다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="small-text">
+        전달해야 할 내용은 그대로였다.<br><br>
+
+        휴대폰.<br>
+        촬영 안내.<br>
+        비상시 대피.<br><br>
+
+        달라진 것은 정보가 아니라<br>
+        그 정보를 만나는 시간이었다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="kicker">설명과 경험 사이</div>
+
+    <div class="text">
+        프로그램북은 공연을 설명하기 위해 존재한다.<br><br>
+
+        하지만 공연을 설명하는 일이<br>
+        반드시 공연 밖에 있어야 하는지는 모르겠다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="image">
+        <img src="../images/dalsu/programbook.jpg" alt="웹프로그램북 화면">
+    </div>
+
+    <div class="small-text">
+        시작은 예술감독이 가져온 하나의 이미지였다.<br><br>
+
+        그것이 연출을 거쳐 나에게 왔고,<br>
+        나는 가능한 형태를 찾아갔다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="text">
+        당신은 인간입니까.<br><br>
+        안드로이드입니까.<br><br>
+        피를 판매하러 왔습니까.<br><br>
+        구매하러 왔습니까.
+    </div>
+
+    <div class="caption">
+        정보를 보기 전,<br>
+        먼저 위치를 묻기로 했다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="kicker">무대 밖의 시간</div>
+
+    <div class="text">
+        홍보는 보통<br>
+        만들어진 공연을 보여준다.<br><br>
+
+        이번에는 조금 다른 방향을 생각했다.
+    </div>
+</section>
+
+<section class="scene">
+    <div class="image">
+        <img src="../images/dalsu/promo.jpg" alt="홍보영상 작업 화면">
+    </div>
+
+    <div class="small-text">
+        이미 있는 장면을 소개하기보다<br>
+        있었을지도 모르는 시간을 만들고 싶었다.<br><br>
+
+        무대에서 보여지지 않는 시간.<br>
+        등장하지 않는 기록.<br>
+        하지만 인물에게는 존재했을 하루.
+    </div>
+</section>
+
+<section class="scene center">
+    <div class="text">
+        공연은 결국 사라진다.
+    </div>
+
+    <div class="caption">
+        그래서 기록하려 한다.<br><br>
+
+        완성된 결과보다<br>
+        그곳으로 향하던 생각들을.<br><br>
+
+        보이는 것과<br>
+        남겨진 것 사이.
+    </div>
+</section>
+
+</main>
 
 </body>
-
 </html>
