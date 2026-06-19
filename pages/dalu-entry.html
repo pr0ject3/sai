@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ENTRY_001 들어가는 프로그램북</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #111;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.back {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+    font-size: 14px;
+    color: #777;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 12vh 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.code,
+.label,
+.card-title {
+    font-family: Arial, sans-serif;
+}
+
+.code {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: clamp(52px, 8vw, 130px);
+    line-height: 1.05;
+    letter-spacing: -0.07em;
+    font-weight: 800;
+}
+
+.text {
+    max-width: 780px;
+    font-size: clamp(22px, 3vw, 42px);
+    line-height: 1.65;
+    letter-spacing: -0.04em;
+}
+
+.small {
+    margin-top: 40px;
+    max-width: 680px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.image-box {
+    width: min(760px, 100%);
+    border: 1px solid #111;
+    padding: 18px;
+    margin-bottom: 44px;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 50px;
+    max-width: 760px;
+}
+
+.choice {
+    border: 1px solid #111;
+    padding: 34px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+}
+
+.flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 980px;
+    margin-top: 50px;
+}
+
+.flow-card {
+    border: 1px solid #111;
+    padding: 28px;
+    min-height: 190px;
+}
+
+.card-title {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 28px;
+}
+
+.card-text {
+    font-size: 22px;
+    line-height: 1.6;
+    letter-spacing: -0.04em;
+}
+
+@media(max-width:700px) {
+    .section {
+        padding: 12vh 7vw;
+    }
+
+    .back {
+        position: absolute;
+    }
+
+    .choice-grid,
+    .flow {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="back" href="dalsu.html">← RECORD LIST</a>
+
+<section class="section">
+    <div class="code">ENTRY_001</div>
+
+    <div class="title">
+        들어가는<br>
+        프로그램북
+    </div>
+</section>
+
+<section class="section">
+    <div class="text">
+        프로그램북은 보통<br>
+        공연을 설명한다.
+    </div>
+
+    <div class="small">
+        배우.<br>
+        줄거리.<br>
+        제작진.<br><br>
+
+        관객이 공연을 보기 전에 확인하는 정보들.
+    </div>
+</section>
+
+<section class="section">
+    <div class="text">
+        시작은 하나의 이미지였다.
+    </div>
+
+    <div class="small">
+        “13구역 같은 느낌을 활용해보면 어떨까.”<br><br>
+
+        예술감독의 제안은<br>
+        연출을 거쳐 나에게 도착했다.
+    </div>
+</section>
+
+<section class="section">
+    <div class="image-box">
+        <img src="../images/dalsu/entry-draft.jpg" alt="웹프로그램북 초기 시안">
+    </div>
+
+    <div class="text">
+        이미지는 화면이 되고,<br>
+        화면은 누를 수 있는 공간이 되었다.
+    </div>
+
+    <div class="small">
+        처음에는 보기 좋은 모바일 프로그램북을 만드는 일에 가까웠다.
+    </div>
+</section>
+
+<section class="section">
+    <div class="text">
+        그런데 완성된 화면 앞에<br>
+        또 하나의 입구가 생겼다.
+    </div>
+
+    <div class="choice-grid">
+        <div class="choice">인간</div>
+        <div class="choice">안드로이드</div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="choice-grid">
+        <div class="choice">판매</div>
+        <div class="choice">구매</div>
+    </div>
+
+    <div class="small">
+        정보를 보기 전에<br>
+        관객은 먼저 자신의 위치를 선택했다.
+    </div>
+</section>
+
+<section class="section">
+    <div class="image-box">
+        <img src="../images/dalsu/entry-main.jpg" alt="기록열람실 메인 화면">
+    </div>
+
+    <div class="text">
+        만들어진 것은 웹페이지였지만,<br>
+        관심이 갔던 것은 기술이 아니었다.
+    </div>
+
+    <div class="small">
+        공연을 설명하는 시간이<br>
+        공연을 만나는 시간으로 조금 이동할 수 있는지.
+    </div>
+</section>
+
+<section class="section">
+    <div class="flow">
+        <div class="flow-card">
+            <div class="card-title">SOURCE</div>
+            <div class="card-text">
+                하나의<br>
+                컨셉 이미지
+            </div>
+        </div>
+
+        <div class="flow-card">
+            <div class="card-title">STRUCTURE</div>
+            <div class="card-text">
+                터치 가능한<br>
+                화면 구조
+            </div>
+        </div>
+
+        <div class="flow-card">
+            <div class="card-title">ENTRY</div>
+            <div class="card-text">
+                관객의<br>
+                위치 선택
+            </div>
+        </div>
+    </div>
+
+    <div class="small">
+        아이디어는 전달되고 구현되는 동안<br>
+        조금씩 다른 형태가 되었다.
+    </div>
+</section>
+
+<section class="section">
+    <div class="text">
+        프로그램북은<br>
+        읽는 자료에서<br><br>
+
+        잠시 들어가는 장소가 되었다.
+    </div>
+</section>
+
+</body>
+
+</html>
