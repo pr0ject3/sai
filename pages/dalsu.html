@@ -14,29 +14,36 @@
 
 body {
     margin: 0;
-    background: #fff;
+    background: #ffffff;
     color: #111;
     font-family: sans-serif;
 }
 
-.page {
-    width: 100%;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.scene {
+.back {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+    font-size: 14px;
+    color: #777;
+    z-index: 10;
+}
+
+.back:hover {
+    color: #111;
+}
+
+.hero {
     min-height: 100vh;
     padding: 12vh 10vw;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    border-bottom: 1px solid #eee;
-}
-
-.scene.center {
-    align-items: center;
-    text-align: center;
 }
 
 .number {
@@ -52,69 +59,103 @@ body {
     font-weight: 700;
 }
 
-.caption {
+.meta {
     margin-top: 48px;
     color: #777;
     font-size: 16px;
     line-height: 1.8;
 }
 
-.kicker {
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 28px;
+.intro {
+    padding: 10vh 10vw 4vh;
+    max-width: 900px;
 }
 
-.text {
-    max-width: 720px;
-    font-size: clamp(22px, 3vw, 42px);
-    line-height: 1.55;
+.intro p {
+    font-size: clamp(20px, 2.4vw, 34px);
+    line-height: 1.7;
     letter-spacing: -0.04em;
-    font-weight: 500;
+    margin: 0;
 }
 
-.small-text {
-    max-width: 680px;
-    font-size: clamp(18px, 2vw, 26px);
-    line-height: 1.8;
-    color: #333;
+.folder-section {
+    padding: 6vh 10vw 14vh;
 }
 
-.image {
-    width: min(720px, 100%);
-    margin-bottom: 48px;
+.folder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
 }
 
-.image img {
-    width: 100%;
-    display: block;
+.folder {
+    min-height: 260px;
+    padding: 32px;
+    border: 1px solid #111;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 0.25s ease;
 }
 
-.back {
-    position: fixed;
-    top: 28px;
-    left: 28px;
+.folder:hover {
+    background: #111;
+    color: #fff;
+}
 
+.folder-code {
     font-size: 14px;
     color: #777;
-    text-decoration: none;
 }
 
-.back:hover {
-    color: #111;
+.folder:hover .folder-code {
+    color: #aaa;
+}
+
+.folder-title {
+    font-size: clamp(32px, 4vw, 64px);
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    line-height: 1.1;
+}
+
+.folder-desc {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #777;
+}
+
+.folder:hover .folder-desc {
+    color: #ddd;
 }
 
 @media (max-width: 700px) {
-    .scene {
-        padding: 10vh 7vw;
-    }
-
     .back {
         position: absolute;
     }
 
-    .text {
-        font-size: 26px;
+    .hero {
+        padding: 12vh 7vw;
+    }
+
+    .intro {
+        padding: 8vh 7vw 4vh;
+    }
+
+    .folder-section {
+        padding: 5vh 7vw 12vh;
+    }
+
+    .folder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .folder {
+        min-height: 220px;
     }
 }
 </style>
@@ -124,9 +165,7 @@ body {
 
 <a class="back" href="../index.html">← 프로젝트삼 : 사이</a>
 
-<main class="page">
-
-<section class="scene center">
+<section class="hero">
     <div class="number">001</div>
 
     <div class="title">
@@ -135,162 +174,80 @@ body {
         바다아이
     </div>
 
-    <div class="caption">
+    <div class="meta">
         2026.06<br>
         선돌극장<br><br>
-        무대 위에 남은 것보다<br>
-        무대 밖에서 지나간 시간들이 조금 더 궁금해졌다.
+        작업 기록
     </div>
 </section>
 
-<section class="scene">
-    <div class="kicker">공연이 시작되기 전의 시간</div>
+<section class="intro">
+    <p>
+        공연 준비 과정에서 만들어지는 것들 중에는<br>
+        정작 무대 위에 올라가지 않는 것들이 있다.<br><br>
 
-    <div class="text">
-        공연을 만들 때마다<br>
-        시작점에 대해 생각하게 된다.<br><br>
+        관객이 입장할 때 듣는 음악,<br>
+        공연 전 손 안에서 열어보는 프로그램북,<br>
+        공연을 만나기 전 보게 되는 영상.<br><br>
 
-        첫 대사인지.<br>
-        암전인지.<br>
-        관객이 객석에 앉는 순간인지.
-    </div>
+        이번 기록은 그 주변부에 관한 것이다.
+    </p>
 </section>
 
-<section class="scene">
-    <div class="image">
-        <img src="../images/stage.jpg" alt="공연 전 무대">
-    </div>
+<section class="folder-section">
+    <div class="folder-grid">
 
-    <div class="small-text">
-        명확하게 선을 긋기는 어렵다.<br><br>
+        <a class="folder" href="dalsu-voice.html">
+            <div>
+                <div class="folder-code">VOICE_001</div>
+                <div class="folder-title">안내의<br>목소리</div>
+            </div>
 
-        다만 이번 작업에서도 결국 비슷한 곳에서 멈췄다.<br>
-        무대 위에 올리는 것과 관객이 실제로 경험하는 것은<br>
-        어디까지 같은 것인가.
-    </div>
-</section>
+            <div class="folder-desc">
+                AI 안내음악 제작 기록<br>
+                공연 전 안내는 어디까지 작품과 가까워질 수 있는가
+            </div>
+        </a>
 
-<section class="scene">
-    <div class="image">
-        <img src="../images/suno.jpg" alt="SUNO 작업 화면">
-    </div>
+        <a class="folder" href="dalsu-entry.html">
+            <div>
+                <div class="folder-code">ENTRY_001</div>
+                <div class="folder-title">들어가는<br>프로그램북</div>
+            </div>
 
-    <div class="text">
-        “하우스 음악이라도 만들어 볼까요?”
-    </div>
+            <div class="folder-desc">
+                웹 프로그램북 제작 기록<br>
+                정보를 보기 전 관객의 위치를 먼저 묻기
+            </div>
+        </a>
 
-    <div class="caption">
-        시작은 특별한 계획보다<br>
-        12,000원의 유료 결제가 아까워 던진 작은 제안에 가까웠다.
-    </div>
-</section>
+        <a class="folder" href="dalsu-memory.html">
+            <div>
+                <div class="folder-code">MEMORY_001</div>
+                <div class="folder-title">없었던<br>시간</div>
+            </div>
 
-<section class="scene">
-    <div class="text">
-        “안내멘트를 노래로 하면 재밌겠다.”
-    </div>
+            <div class="folder-desc">
+                홍보영상 제작 기록<br>
+                무대 위에 없던 하루를 먼저 보여주는 일
+            </div>
+        </a>
 
-    <div class="caption">
-        연출의 한마디가 더해지며<br>
-        음악은 분위기를 채우는 것에서<br>
-        역할을 가지기 시작했다.
-    </div>
-</section>
+        <a class="folder" href="dalsu-note.html">
+            <div>
+                <div class="folder-code">NOTE_001</div>
+                <div class="folder-title">남은<br>생각</div>
+            </div>
 
-<section class="scene">
-    <div class="small-text">
-        전달해야 할 내용은 그대로였다.<br><br>
+            <div class="folder-desc">
+                작업 이후 남은 질문들<br>
+                공연의 주변부를 다시 바라보기
+            </div>
+        </a>
 
-        휴대폰.<br>
-        촬영 안내.<br>
-        비상시 대피.<br><br>
-
-        달라진 것은 정보가 아니라<br>
-        그 정보를 만나는 시간이었다.
-    </div>
-</section>
-
-<section class="scene">
-    <div class="kicker">설명과 경험 사이</div>
-
-    <div class="text">
-        프로그램북은 공연을 설명하기 위해 존재한다.<br><br>
-
-        하지만 공연을 설명하는 일이<br>
-        반드시 공연 밖에 있어야 하는지는 모르겠다.
     </div>
 </section>
-
-<section class="scene">
-    <div class="image">
-        <img src="../images/dalsu/programbook.jpg" alt="웹프로그램북 화면">
-    </div>
-
-    <div class="small-text">
-        시작은 예술감독이 가져온 하나의 이미지였다.<br><br>
-
-        그것이 연출을 거쳐 나에게 왔고,<br>
-        나는 가능한 형태를 찾아갔다.
-    </div>
-</section>
-
-<section class="scene">
-    <div class="text">
-        당신은 인간입니까.<br><br>
-        안드로이드입니까.<br><br>
-        피를 판매하러 왔습니까.<br><br>
-        구매하러 왔습니까.
-    </div>
-
-    <div class="caption">
-        정보를 보기 전,<br>
-        먼저 위치를 묻기로 했다.
-    </div>
-</section>
-
-<section class="scene">
-    <div class="kicker">무대 밖의 시간</div>
-
-    <div class="text">
-        홍보는 보통<br>
-        만들어진 공연을 보여준다.<br><br>
-
-        이번에는 조금 다른 방향을 생각했다.
-    </div>
-</section>
-
-<section class="scene">
-    <div class="image">
-        <img src="../images/dalsu/promo.jpg" alt="홍보영상 작업 화면">
-    </div>
-
-    <div class="small-text">
-        이미 있는 장면을 소개하기보다<br>
-        있었을지도 모르는 시간을 만들고 싶었다.<br><br>
-
-        무대에서 보여지지 않는 시간.<br>
-        등장하지 않는 기록.<br>
-        하지만 인물에게는 존재했을 하루.
-    </div>
-</section>
-
-<section class="scene center">
-    <div class="text">
-        공연은 결국 사라진다.
-    </div>
-
-    <div class="caption">
-        그래서 기록하려 한다.<br><br>
-
-        완성된 결과보다<br>
-        그곳으로 향하던 생각들을.<br><br>
-
-        보이는 것과<br>
-        남겨진 것 사이.
-    </div>
-</section>
-
-</main>
 
 </body>
+
 </html>
