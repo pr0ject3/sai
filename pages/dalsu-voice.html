@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOICE_001 안내의 목소리</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #111;
+
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.back {
+    position: fixed;
+    top: 28px;
+    left: 28px;
+
+    font-size: 14px;
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 10;
+}
+
+.section {
+    min-height: 100vh;
+
+    padding: 12vh 10vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* 첫 화면 */
+
+.code {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    color: #777;
+
+    margin-bottom: 40px;
+}
+
+
+.title {
+
+    font-size: clamp(52px, 8vw, 130px);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 800;
+
+}
+
+
+.text {
+
+    max-width: 780px;
+
+    font-size: clamp(22px, 3vw, 42px);
+
+    line-height: 1.65;
+
+    letter-spacing: -0.04em;
+
+}
+
+
+.small {
+
+    margin-top: 40px;
+
+    max-width: 600px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #555;
+
+}
+
+
+.system {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(28px,4vw,60px);
+
+    font-weight: bold;
+
+    letter-spacing: -0.05em;
+
+}
+
+
+.audio-box {
+
+    width: min(600px,100%);
+
+    border: 1px solid #111;
+
+    padding: 40px;
+
+}
+
+
+.audio-title {
+
+    font-family: Arial, sans-serif;
+
+    margin-bottom: 30px;
+
+}
+
+
+audio {
+
+    width: 100%;
+
+}
+
+
+.compare {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 24px;
+
+    margin-top: 50px;
+
+}
+
+
+.card {
+
+    border: 1px solid #111;
+
+    padding: 32px;
+
+    min-height: 220px;
+
+}
+
+
+.card-title {
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+}
+
+
+@media(max-width:700px){
+
+.section {
+    padding: 12vh 7vw;
+}
+
+.back {
+    position:absolute;
+}
+
+.compare {
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<a class="back" href="dalsu.html">← RECORD LIST</a>
+
+
+
+<section class="section">
+
+    <div class="code">
+        VOICE_001
+    </div>
+
+
+    <div class="title">
+        안내의<br>
+        목소리
+    </div>
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="audio-box">
+
+        <div class="audio-title">
+            DALSURANG_NOTICE_FINAL.wav
+        </div>
+
+        <audio controls>
+
+            <source src="../audio/dalsu_notice.mp3">
+
+        </audio>
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="text">
+
+        시작은 특별한 계획이 아니었다.
+
+    </div>
+
+
+    <div class="small">
+
+        AI 음악 서비스를 결제했고,<br>
+        어떻게든 써보기 위해 연습실에서 던진 말이었다.
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="system">
+
+        "하우스 음악이라도 만들어 볼까요?"
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="system">
+
+        "안내멘트를 노래로 하면 재밌겠다."
+
+    </div>
+
+
+    <div class="small">
+
+        연출의 한마디가 더해지면서<br>
+        단순한 음악 만들기가 조금 다른 방향으로 움직였다.
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="text">
+
+        만드는 것은 생각보다 쉬웠다.<br><br>
+
+        어려운 것은<br>
+        무엇을 남길지 정하는 일이었다.
+
+    </div>
+
+
+    <div class="compare">
+
+
+        <div class="card">
+
+            <div class="card-title">
+                VERSION A
+            </div>
+
+            느린 템포<br><br>
+
+            분위기는 좋지만<br>
+            공연 시작 전의 에너지와는 조금 달랐다.
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-title">
+                VERSION B
+            </div>
+
+            밝은 템포<br><br>
+
+            안내이면서 동시에<br>
+            관객을 맞이하는 느낌.
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="text">
+
+        안내는 음악이 되었지만,<br>
+        여전히 안내여야 했다.
+
+    </div>
+
+
+    <div class="small">
+
+        어디까지 작품의 분위기로 가져갈 것인지.<br>
+        어디까지 현실의 정보를 남겨둘 것인지.
+
+    </div>
+
+
+</section>
+
+
+
+<section class="section">
+
+
+    <div class="text">
+
+        인간과 인간이 아닌 존재가 함께하는 이야기에서,
+
+        <br><br>
+
+        관객이 처음 만난 것은<br>
+
+        인간이 만든<br>
+        인간이 아닌 목소리였다.
+
+    </div>
+
+
+</section>
+
+
+
+</body>
+
+</html>
